@@ -25,7 +25,6 @@
             transform-origin: 0 0;
             border:0;
         }
-        .preFrame {transform: scale(0.4); transform-origin: 0 0;  border: 0; }
     </style>
 </head>
 <body>
@@ -37,19 +36,11 @@
             <header id="header">
                 <h5 style="font-weight: 600">미리보기</h5>
             </header>
-            <div style="width: 100%; margin-bottom: 20px">
-                <span>▶ 자동전환시간</span>
-                <select id="sel1" name="time" style="width: 70px;" onchange="changeTimeSetting(this.value)">
-                    <?php for($i=1; $i <= 10; $i++) { ?>
-                        <option <?php if($val == $i) {?> selected <?php }?> value="<?=$i?>" ><?=$i?>분</option>
-                    <?php } ?>
-                </select>
-            </div>
 
-            <div class="kiosk_pre">
-                <span>▶ 미리보기</span>
-                <div style=" width:432px; height:768px; margin:20px 0; padding:0; overflow:hidden; border:2px solid #000000;">
-                    <iframe id="pre_view" src="http://localhost:8080/" width="2160" height="3840" class="zoom_4kp"></iframe>
+            <div class="kiosk_pre" style="margin-left: 50px;">
+                <span>▶ 키오스크 화면 미리보기</span>
+                <div style=" width:768px; height:432px; margin:20px 0; padding:0; overflow:hidden; border:2px solid #000000;">
+                    <iframe id="pre_view" src="http://localhost:8080/" width="3840" height="2160" class="zoom_4kp"></iframe>
                 </div>
             </div>
         </div>

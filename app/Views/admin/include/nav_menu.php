@@ -1,5 +1,5 @@
 <style>
-    @import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css');
+    @import url('//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
     .sidebar {
         width: 20rem;
@@ -23,7 +23,7 @@
         border-bottom: 1px dashed #eeeff1;
     }
     .sidebar #leftside-navigation ul li.active > a {
-        color: #1abc9c;
+        color: #34aff7;
     }
     .sidebar #leftside-navigation ul li.active ul {
         display: block;
@@ -41,7 +41,7 @@
         transition: all 200ms ease-in;
     }
     .sidebar #leftside-navigation ul li a:hover {
-        color: #1abc9c;
+        color: #34aff7;
     }
     .sidebar #leftside-navigation ul li a span {
         display: inline-block;
@@ -96,30 +96,14 @@
             <aside class="sidebar">
                 <div id="leftside-navigation" class="nano">
                     <ul class="nano-content">
-                        <li class="admin"><a href="/admin/main" id="main"><i class="fa fa-home"></i><span>미리보기</span></a></li>
+                        <li class="admin"><a href="/admin/main" id="main"><i class="fa fa-home"></i>&nbsp;<span>미리보기</span></a></li>
+                        <li class="admin"><a href="/admin/intro" id="main"><i class="fa fa-file-text-o"></i>&nbsp;<span>대기화면</span></a></li>
                         <li class="admin sub-menu">
-                            <a href="javascript:void(0);" id="intro"><i class="fa fa-file-text-o"></i><span>대기화면(인트로)</span><i class="arrow fa fa-angle-right pull-right"></i></a>
-                            <ul id="intro_ul">
-                                <li><a href="/admin/intro">목록</a></li>
-                                <li><a href="/admin/intro/setting">환경설정</a></li>
-                            </ul>
-                        </li>
-                        <li class="admin sub-menu">
-                            <a href="javascript:void(0);" id="school"><i class="fa fa-info"></i><span>학교안내</span><i class="arrow fa fa-angle-right pull-right"></i></a>
-                            <ul id="school_ul">
-                                <li><a href="/admin/school/msg">학교장인사말</a></li>
-                                <li><a href="/admin/school/history">학교연혁</a></li>
-                                <li><a href="/admin/school/info">학교소개</a></li>
-                                <li><a href="/admin/school/song">교가</a></li>
-                            </ul>
-                        </li>
-                        <li class="admin"><a href="/admin/count" id="main"><i class="fa fa-bar-chart-o"></i><span>학교현황</span></a></li>
-                        <li class="admin"><a href="/admin/notice" id="main"><i class="fa fa-calendar-o"></i><span>알림마당</span></a></li>
-                        <li class="admin sub-menu">
-                            <a href="javascript:void(0);" id="gallery"><i class="fa fa-picture-o"></i><span>갤러리</span><i class="arrow fa fa-angle-right pull-right"></i></a>
-                            <ul id="gallery_ul">
-                                <li><a href="/admin/gallery/graduate">졸업생 앨범</a></li>
-                                <li><a href="/admin/gallery/history">역사관</a></li>
+                            <a href="javascript:void(0);" id="insert"><i class="fa fa-address-card-o"></i>&nbsp;<span>조직도</span><i class="arrow fa fa-angle-right pull-right"></i></a>
+                            <ul id="insert_ul">
+                                <li><a href="/admin/org/list_div"> ▶ 기관</a></li>
+                                <li><a href="/admin/org/list_text"> ▶ 인사정보</a></li>
+                                <li><a href="/admin/org/list_img"> ▶ 인사정보_이미지</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -133,20 +117,8 @@
 <script>
     $( document ).ready( function() {
         url = window.location.href;
-        if(url.includes('intro') == true){
-            var con = document.getElementById("intro_ul");
-            con.style.display = "block";
-        }else if (url.includes('school') == true) {
-            var con = document.getElementById("school_ul");
-            con.style.display = "block";
-        }else if(url.includes('info') == true){
-            var con = document.getElementById("info_ul");
-            con.style.display = "block";
-        }else if(url.includes('notice') == true){
-            var con = document.getElementById("notice_ul");
-            con.style.display = "block";
-        }else if(url.includes('gallery') == true){
-            var con = document.getElementById("gallery_ul");
+        if(url.includes('org') == true){
+            var con = document.getElementById("insert_ul");
             con.style.display = "block";
         }else{
             $("#main").trigger("click");

@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>모전초등학교_관리자페이지</title>
+    <title>경찰청_관리자페이지</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link href="/bootstrap/css/styles.css" rel="stylesheet" />
@@ -25,7 +25,7 @@
 <body>
 <div class="container">
     <div class="row justify-content-center" style="margin-top: 60px;">
-        <h7>안덕초등학교<br/>관리자페이지</h7>
+        <h7>경찰청 지휘부 현황판<br/>관리자페이지</h7>
         <div class="col-xl-6 col-lg-8 col-md-9" style="margin-top: 30px">
             <div class="card o-hidden border-0 shadow-lg my-5">
                 <div class="card-body p-0" >
